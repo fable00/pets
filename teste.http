@@ -1,0 +1,6 @@
+GET http://localhost:3000/pets
+
+--
+
+POST http://localhost:3000/pets
+
