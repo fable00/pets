@@ -3,7 +3,7 @@ services:
     image: postgres:17-alpine
     environment:
       - POSTGRES_USER=Pets
-      - POSTGRES_PASSWORD=Mudar@123
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     ports:
       - 5432:5432
   adminer:

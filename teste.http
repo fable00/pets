@@ -1,6 +1,37 @@
 GET http://localhost:3000/pets
 
---
+###
+
+GET http://localhost:3000/pets/3
+
+###
 
 POST http://localhost:3000/pets
+content-type: application/json
 
+{
+  "id": 3,
+  "name": "Princess",
+  "age": 2,
+  "breed": "Golden Retriever",
+  "color": "Brown",
+  "gender": "Female"
+}
+
+###
+
+PUT http://localhost:3000/pets/3
+content-type: application/json
+
+{
+  "id": 3,
+  "name": "Princess",
+  "age": 3,
+  "breed": "Golden Retriever",
+  "color": "Golden",
+  "gender": "Female"
+}
+
+### 
+
+DELETE http://localhost:3000/pets/3

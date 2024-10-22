@@ -1,12 +1,14 @@
-import { ErrorRequestHandler, Request, Response } from "express";
+import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
 import { ValidationError } from "sequelize";
 import { ZodError } from "zod";
-import { NotFoundError } from "../services/exceptions";
+import { NotFoundError } from "../models/exceptions";
 
 export const errorHandler =(
   err: ErrorRequestHandler,
   req: Request,
   res: Response,
+  //eslint-disable-next-line @typescript-eslint/no-unused-vars
+  next: NextFunction,
 ) =>{
   console.error("Got an error", err)
   if (err instanceof ZodError) {
